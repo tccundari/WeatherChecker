@@ -7,3 +7,7 @@ This project was made as an example to show how to build a simple webcrawler, to
 
 Build in Visual Studio 2019
 .NET Core 5 (C#)
+
+
+V0.1 - Create solution and base crawler
+V0.2 - Add a API layer to consume the service
