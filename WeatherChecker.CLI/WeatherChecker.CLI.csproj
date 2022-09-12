@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WeatherChecker.Entity\WeatherChecker.Entity.csproj" />
+    <ProjectReference Include="..\WeatherChecker.WebCrawler\WeatherChecker.WebCrawler.csproj" />
+  </ItemGroup>
+
+</Project>
