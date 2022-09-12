@@ -40,7 +40,7 @@ namespace WeatherChecker.WebCrawler
         /// The main method for get weather information
         /// </summary>
         /// <param name="state">The state territory name that will be used to raise precision on the search</param>
-        public void GetWheatherInformation(StateTerritory state = StateTerritory.NONE)
+        public IList<Entity.WeatherInfoPlaces> GetWheatherInformation(StateTerritory state = StateTerritory.NONE)
         {
             var url = BGA_URL;
 
@@ -55,7 +55,7 @@ namespace WeatherChecker.WebCrawler
             var resultTable = GetMainResultTable(html);
 
             //Extract the info from the table and fill a list with our generic object
-            var lstInfos = GetWeatherInfo(resultTable);
+            return GetWeatherInfo(resultTable);
         }
 
         /// <summary>
@@ -88,9 +88,9 @@ namespace WeatherChecker.WebCrawler
 
             //I realize that table content can change depend of the search, if you pass the state information yout will get the columns for lower and highest temperature
             if (table.Contains("obs rain"))
-                pattern = "<td class=\"description\"><a href=\".*?\" class=\".*?\">(.*?)<\\/a><\\/td><td class=\"min\">(.*?)<\\/td><td class=\"max\">(.*?)<\\/td><td class=\"precis\">(.*?)<\\/td><td class=\"obs now\">(.*?)<\\/td><td class=\"obs rain\">(.*?)<\\/td><\\/tr>";
+                pattern = "<td class=\"description\"><a href=\".*?\" class=\".*?\">(.*?)<\\/a><\\/td><td class=\"min\".*?>(.*?)<.*?td class=\"max\">(.*?)<\\/td><td class=\"precis\">(.*?)<\\/td><td class=\"obs now\">(.*?)<\\/td><td class=\"obs rain\">(.*?)<\\/td><\\/tr>";
             else
-                pattern = "<td class=\"description\"><a href=\".*?\" class=\".*?\">(.*?)<\\/a><\\/td><td class=\"min\">(.*?)<\\/td><td class=\"max\">(.*?)<\\/td><td class=\"precis\">(.*?)<\\/td><td class=\"obs now\">(.*?)<\\/td><td class=\"obs low\">(.*?)<span class=\"time\"> \\((.*?)\\)<\\/span><\\/td><td class=\"obs high\">(.*?)<span class=\"time\"> \\((.*?)\\)<\\/span><\\/td><\\/tr>";
+                pattern = "<td class=\"description\"><a href=\".*?\" class=\".*?\">(.*?)<\\/a><\\/td><td class=\"min\".*?>(.*?)<.*?td class=\"max\">(.*?)<\\/td><td class=\"precis\">(.*?)<\\/td><td class=\"obs now\">(.*?)<\\/td><td class=\"obs low\">(.*?)<span class=\"time\"> \\((.*?)\\)<\\/span><\\/td><td class=\"obs high\">(.*?)<span class=\"time\"> \\((.*?)\\)<\\/span><\\/td><\\/tr>";
 
             //must use the option singleline to read html with brealines
             var mtInfos = Regex.Matches(table, pattern, RegexOptions.Singleline);
