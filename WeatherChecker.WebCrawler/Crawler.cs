@@ -11,7 +11,7 @@ namespace WeatherChecker.WebCrawler
     /// <summary>
     /// Class used to make the web requests 
     /// </summary>
-    public class Crawler
+    internal class Crawler
     {
         /// <summary>
         /// Simple GET REQUEST METHOD 

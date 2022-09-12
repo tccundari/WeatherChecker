@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.WebCrawler",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.Entity", "WeatherChecker.Entity\WeatherChecker.Entity.csproj", "{C270413A-2B12-4625-9480-FA56480F5767}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.API", "WeatherChecker.API\WeatherChecker.API.csproj", "{AC4CAE59-2550-4B24-AB68-AC8A0F59526F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C270413A-2B12-4625-9480-FA56480F5767}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C270413A-2B12-4625-9480-FA56480F5767}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C270413A-2B12-4625-9480-FA56480F5767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC4CAE59-2550-4B24-AB68-AC8A0F59526F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC4CAE59-2550-4B24-AB68-AC8A0F59526F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC4CAE59-2550-4B24-AB68-AC8A0F59526F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC4CAE59-2550-4B24-AB68-AC8A0F59526F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
