@@ -1,0 +1,36 @@
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Min</th>
+      <th>Max</th>
+      <th>Precision</th>
+      <th>Temp. Now</th>
+      <th>Lower</th>
+      <th>Time Low</th>
+      <th>High</th>
+      <th>Time High</th>
+      <th>Rain</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of forecasts">
+      <td>{{ forecast.descriptionCity }}</td>
+      <td>{{ forecast.min }}</td>
+      <td>{{ forecast.max }}</td>
+      <td>{{ forecast.precision }}</td>
+      <td>{{ forecast.obsNow }}</td>
+      <td>{{ forecast.obsLow }}</td>
+      <td>{{ forecast.obsLowTime }}</td>
+      <td>{{ forecast.obsHigh }}</td>
+      <td>{{ forecast.obsHighTime }}</td>
+      <td>{{ forecast.obsRain }}</td>
+    </tr>
+  </tbody>
+</table>

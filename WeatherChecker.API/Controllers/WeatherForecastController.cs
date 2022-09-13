@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using WeatherChecker.WebCrawler;
 
 namespace WeatherChecker.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors]
     public class WeatherChecker : ControllerBase
     {
         private readonly ILogger<WeatherChecker> _logger;
@@ -22,7 +22,6 @@ namespace WeatherChecker.API.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<IEnumerable<Entity.WeatherInfoPlaces>> Get()
         {
             return StatusCode(StatusCodes.Status200OK, crawler.GetWheatherInformation());
