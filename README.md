@@ -1,7 +1,7 @@
 # Description
-A webCrawler that get wheather information of Australian cities from the Australian Government WebSite.
+A simple solution made to get wheather information of Australian cities from the [Australian Government WebSite.](http://www.bom.gov.au/australia/index.shtml) using a basic WebScraper and provide the information through an API to a web interface.
 
-This project was made as an example to show how to build a simple webcrawler, to shows how to struct data on the solution and how pro provide a service with the information that you get.
+This project was made as an example to show how to build a simple WebScraper, to shows how to struct data on the solution and how pro provide a service with the information that you get.
 
 *This project was made only to share code skills and teach about programming bots, there is no lucrative porpose on this project and can not be used in any business interests.
 
