@@ -10,6 +10,7 @@ This project was made as an example to show how to build a simple WebScraper, to
 - .NET Core 5 (C#)
 - Angular 6
 
+## Features
 * [X] Create solution and base crawler
 * [X] Add a API layer provide the information as services
 * [X] Add a Web Interface and consume our APIs
