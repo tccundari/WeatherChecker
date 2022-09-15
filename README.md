@@ -19,6 +19,11 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [ ] Add Data Exportation
 * [ ] Generate Dashborads and Reports
 
+## Now I'm Working in...
+* [ ] Build a global notification and alerts 
+* [ ] Clean unnecessary code
+* [ ] Basic search on information table
+
 ### Instructions
 The API service was configured to run in your localhost whitout the need to be published in some virtual directory, just build the API project in the solution then go to compiled files and run the .exe to start up the API local server.
 ```
