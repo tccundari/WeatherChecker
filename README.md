@@ -20,7 +20,7 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [ ] Generate Dashborads and Reports
 
 ## Now I'm Working in...
-* [ ] Build a global notification and alerts 
+* [ ] Build a global notification and alerts Credits to \(@Cristux for the amazing [template](https://stackblitz.com/edit/angular-notification-service)\)
 * [ ] Clean unnecessary code
 * [ ] Basic search on information table
 
