@@ -16,7 +16,7 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [X] Add a Web Interface and consume our APIs
 * [X] Build a global notification and alerts Credits to \(@Cristux for the amazing [template](https://stackblitz.com/edit/angular-notification-service)\)
 * [X] Clean unnecessary code
-* [X] Improve interface resources (implemented Angular Material Framework)
+* [X] Improve interface resources (implemented Angular Material SDK)
 * [ ] Add a Unit Test Layer
 * [ ] Add Data Exportation
 * [ ] Generate Dashborads and Reports
