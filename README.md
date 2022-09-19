@@ -14,14 +14,15 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [X] Create solution and base crawler
 * [X] Add a API layer provide the information as services
 * [X] Add a Web Interface and consume our APIs
+* [X] Build a global notification and alerts Credits to \(@Cristux for the amazing [template](https://stackblitz.com/edit/angular-notification-service)\)
+* [X] Clean unnecessary code
+* [X] Improve interface resources (implemented Angular Material Framework)
 * [ ] Add a Unit Test Layer
-* [ ] Improve interface resources
 * [ ] Add Data Exportation
 * [ ] Generate Dashborads and Reports
 
 ## Now I'm Working in...
-* [ ] Build a global notification and alerts Credits to \(@Cristux for the amazing [template](https://stackblitz.com/edit/angular-notification-service)\)
-* [ ] Clean unnecessary code
+* [ ] Create a event log for the API
 * [ ] Basic search on information table
 
 ### Instructions
