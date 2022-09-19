@@ -4,6 +4,12 @@
 
 <p *ngIf="!forecasts"><em>Loading...</em></p>
 
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Search for...</mat-label>
+  <input matInput placeholder="Type here" value="">
+</mat-form-field>
+<button mat-raised-button color="basic" (click)="searchOnGrid()">Search</button>
+
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
   <thead>
     <tr>

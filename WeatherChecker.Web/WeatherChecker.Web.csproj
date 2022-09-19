@@ -10,11 +10,18 @@
 
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    <Authors>Tiago Cundari</Authors>
+    <Company>Cundari Softwares</Company>
+    <Product>WeatherChecker</Product>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="5.0.9" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.8.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +29,16 @@
     <Content Remove="$(SpaRoot)**" />
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\src\app\notification.component.ts" />
+    <None Remove="ClientApp\src\app\notification.service.ts" />
+    <None Remove="ClientApp\src\app\notification.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\notification.component.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
