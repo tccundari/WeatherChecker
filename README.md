@@ -25,6 +25,9 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [ ] Create a event log for the API
 * [ ] Basic search on information table
 
+## Video Walk-Through
+* [ ] [WebScraper](https://youtu.be/eYQpF0J_Yso)
+
 ### Instructions
 The API service was configured to run in your localhost whitout the need to be published in some virtual directory, just build the API project in the solution then go to compiled files and run the .exe to start up the API local server.
 ```
