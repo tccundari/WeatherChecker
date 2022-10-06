@@ -14,7 +14,6 @@ namespace WeatherChecker.API.Controllers
     public class WeatherChecker : ControllerBase
     {
         private readonly ILogger<WeatherChecker> _logger;
-        private WeatherAustralianSite crawler = new WeatherAustralianSite();
 
         public WeatherChecker(ILogger<WeatherChecker> logger)
         {
@@ -24,7 +23,8 @@ namespace WeatherChecker.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Entity.WeatherInfoPlaces>> Get()
         {
-            return StatusCode(StatusCodes.Status200OK, crawler.GetWheatherInformation());
+            _logger.LogInformation("log Get");
+            return StatusCode(StatusCodes.Status200OK, WeatherAustralianSite.GetWheatherInformation());
         }
 
         [HttpGet("{state}")]
@@ -34,7 +34,7 @@ namespace WeatherChecker.API.Controllers
                 return BadRequest("Inválid State, please use: " + string.Join(", ", Enum.GetNames(typeof(WeatherAustralianSite.StateTerritory))));
 
 
-            return StatusCode(StatusCodes.Status200OK, crawler.GetWheatherInformation(st));
+            return StatusCode(StatusCodes.Status200OK, WeatherAustralianSite.GetWheatherInformation(st));
         }
     }
 }
