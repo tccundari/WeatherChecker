@@ -17,16 +17,17 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [X] Build a global notification and alerts Credits to \(@Cristux for the amazing [template](https://stackblitz.com/edit/angular-notification-service)\)
 * [X] Clean unnecessary code
 * [X] Improve interface resources (implemented Angular Material SDK)
+* [X] Basic search on information table by city names
+* [X] Weather Filter by Territory
 * [ ] Add a Unit Test Layer
 * [ ] Add Data Exportation
 * [ ] Generate Dashborads and Reports
 
 ## Now I'm Working in...
-* [ ] Create a event log for the API
-* [ ] Basic search on information table
+* [ ] Create a event log for the API and Erros
 
 ## Video Walk-Through
-* [ ] [WebScraper](https://youtu.be/eYQpF0J_Yso)
+* [X] [WebScraper](https://youtu.be/eYQpF0J_Yso)
 
 ### Instructions
 The API service was configured to run in your localhost whitout the need to be published in some virtual directory, just build the API project in the solution then go to compiled files and run the .exe to start up the API local server.
