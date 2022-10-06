@@ -7,7 +7,7 @@ namespace WeatherChecker.WebCrawler
     /// <summary>
     /// Class used to navigate, search and extract weather information from the Australian government site
     /// </summary>
-    public class WeatherAustralianSite
+    public static class WeatherAustralianSite
     {
         /// <summary>
         /// Territories information for refined Searches
@@ -28,18 +28,18 @@ namespace WeatherChecker.WebCrawler
         /// <summary>
         /// Base url to search weather information on Australian Government website
         /// </summary>
-        private string BGA_URL = "http://www.bom.gov.au/places/";
+        private static string BGA_URL = "http://www.bom.gov.au/places/";
 
         /// <summary>
         /// Refer URL used to mimic browser navigation
         /// </summary>
-        private string BGA_REFER = "http://www.bom.gov.au/australia/index.shtml";
+        private static string BGA_REFER = "http://www.bom.gov.au/australia/index.shtml";
 
         /// <summary>
         /// The main method for get weather information
         /// </summary>
         /// <param name="state">The state territory name that will be used to raise precision on the search</param>
-        public IList<Entity.WeatherInfoPlaces> GetWheatherInformation(StateTerritory state = StateTerritory.NONE)
+        public static IList<Entity.WeatherInfoPlaces> GetWheatherInformation(StateTerritory state = StateTerritory.NONE)
         {
             var url = BGA_URL;
 
@@ -62,7 +62,7 @@ namespace WeatherChecker.WebCrawler
         /// </summary>
         /// <param name="html">Entire html page fromm request</param>
         /// <returns>html containing the table of weather information</returns>
-        private string GetMainResultTable(string html)
+        private static string GetMainResultTable(string html)
         {
             var mtTable = Regex.Match(html, "<tbody>(.*?)<\\/tbody>", RegexOptions.Singleline);
 
@@ -77,7 +77,7 @@ namespace WeatherChecker.WebCrawler
         /// </summary>
         /// <param name="table">html table with the weather information from the page</param>
         /// <returns>List of generic object filled with all weather information from the extracted table</returns>
-        private List<Entity.WeatherInfoPlaces> GetWeatherInfo(string table)
+        private static List<Entity.WeatherInfoPlaces> GetWeatherInfo(string table)
         {
             //Generic list to store all the weather information
             var lstInfos = new List<Entity.WeatherInfoPlaces>();
