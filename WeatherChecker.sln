@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.CLI", "WeatherChecker.CLI\WeatherChecker.CLI.csproj", "{DB0448B7-81DC-4EA3-B4C2-DB7C0E4C0215}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherChecker.CLI", "WeatherChecker.CLI\WeatherChecker.CLI.csproj", "{DB0448B7-81DC-4EA3-B4C2-DB7C0E4C0215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.WebCrawler", "WeatherChecker.WebCrawler\WeatherChecker.WebCrawler.csproj", "{AB36C242-14B7-4469-8B00-566B23EDCD2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherChecker.WebCrawler", "WeatherChecker.WebCrawler\WeatherChecker.WebCrawler.csproj", "{AB36C242-14B7-4469-8B00-566B23EDCD2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.Entity", "WeatherChecker.Entity\WeatherChecker.Entity.csproj", "{C270413A-2B12-4625-9480-FA56480F5767}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherChecker.Entity", "WeatherChecker.Entity\WeatherChecker.Entity.csproj", "{C270413A-2B12-4625-9480-FA56480F5767}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.API", "WeatherChecker.API\WeatherChecker.API.csproj", "{AC4CAE59-2550-4B24-AB68-AC8A0F59526F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherChecker.API", "WeatherChecker.API\WeatherChecker.API.csproj", "{AC4CAE59-2550-4B24-AB68-AC8A0F59526F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.Web", "WeatherChecker.Web\WeatherChecker.Web.csproj", "{A8F5B457-7005-428F-96EF-2859219F0193}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherChecker.Web", "WeatherChecker.Web\WeatherChecker.Web.csproj", "{A8F5B457-7005-428F-96EF-2859219F0193}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherChecker.Test", "WeatherChecker.Test\WeatherChecker.Test.csproj", "{83F5A520-5FCC-40E2-8A2A-928E88A27CB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherChecker.Logs", "WeatherChecker.Logs\WeatherChecker.Logs.csproj", "{B891A504-B4B6-4D5B-9B4C-F66534E901AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{A8F5B457-7005-428F-96EF-2859219F0193}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8F5B457-7005-428F-96EF-2859219F0193}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8F5B457-7005-428F-96EF-2859219F0193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83F5A520-5FCC-40E2-8A2A-928E88A27CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F5A520-5FCC-40E2-8A2A-928E88A27CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F5A520-5FCC-40E2-8A2A-928E88A27CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F5A520-5FCC-40E2-8A2A-928E88A27CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B891A504-B4B6-4D5B-9B4C-F66534E901AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B891A504-B4B6-4D5B-9B4C-F66534E901AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B891A504-B4B6-4D5B-9B4C-F66534E901AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B891A504-B4B6-4D5B-9B4C-F66534E901AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.IO;
 using System.Text.Encodings.Web;
 using System.Text.Json;
@@ -12,6 +13,14 @@ namespace WeatherChecker.CLI
         {
             try
             {
+                IConfiguration Configuration = new ConfigurationBuilder()
+                .AddJsonFile("jsconfig.json", optional: true, reloadOnChange: true)
+                .Build();
+
+                //var log = new Logs.CustomLog(Configuration);
+
+                //log.LogRegister("mensagem");
+
                 var result = WeatherAustralianSite.GetWheatherInformation(WebCrawler.WeatherAustralianSite.StateTerritory.NSW);
 
                 //Convert the object to Json string

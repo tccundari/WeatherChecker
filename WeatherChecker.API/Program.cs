@@ -1,11 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using WeatherChecker.Logs;
 
 namespace WeatherChecker.API
 {
@@ -18,9 +15,18 @@ namespace WeatherChecker.API
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            })
+            .ConfigureLogging((context, logging) =>
+            {
+                logging.ClearProviders();
+
+                logging.AddCustomLog(options =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    context.Configuration.GetSection("Logging").GetSection("CustomLog").GetSection("Options").Bind(options);
                 });
+            });
     }
 }
