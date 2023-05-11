@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using WeatherChecker.WebCrawler;
 
 namespace WeatherChecker.API.Controllers
@@ -15,7 +16,7 @@ namespace WeatherChecker.API.Controllers
     {
         private readonly ILogger<WeatherChecker> _logger;
 
-        public WeatherChecker(ILogger<WeatherChecker> logger)
+        public WeatherChecker([NotNull]ILogger<WeatherChecker> logger)
         {
             _logger = logger;
         }
@@ -23,18 +24,40 @@ namespace WeatherChecker.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Entity.WeatherInfoPlaces>> Get()
         {
-            _logger.LogInformation("log Get");
-            return StatusCode(StatusCodes.Status200OK, WeatherAustralianSite.GetWheatherInformation());
+            try
+            {
+                _logger.LogInformation(3, "{0} GetWheatherInformation",DateTime.Now );
+
+                var result = WeatherAustralianSite.GetWheatherInformation();
+
+                _logger.LogTrace("Information aquired from site");
+
+                return StatusCode(StatusCodes.Status200OK, result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return StatusCode(StatusCodes.Status500InternalServerError, "Sorry about that =/");
+            }
         }
 
         [HttpGet("{state}")]
         public ActionResult<IEnumerable<Entity.WeatherInfoPlaces>> GetByState(string state)
         {
-            if (!Enum.TryParse(state.ToUpper(), out WeatherAustralianSite.StateTerritory st))
-                return BadRequest("Inválid State, please use: " + string.Join(", ", Enum.GetNames(typeof(WeatherAustralianSite.StateTerritory))));
+            try
+            {
+                if (!Enum.TryParse(state.ToUpper(), out WeatherAustralianSite.StateTerritory st))
+                    return BadRequest("Inválid State, please use: " + string.Join(", ", Enum.GetNames(typeof(WeatherAustralianSite.StateTerritory))));
 
 
-            return StatusCode(StatusCodes.Status200OK, WeatherAustralianSite.GetWheatherInformation(st));
+                return StatusCode(StatusCodes.Status200OK, WeatherAustralianSite.GetWheatherInformation(st));
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return StatusCode(StatusCodes.Status500InternalServerError, "Sorry about that =/");
+            }
         }
     }
 }
