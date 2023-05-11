@@ -19,12 +19,18 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [X] Improve interface resources (implemented Angular Material SDK)
 * [X] Basic search on information table by city names
 * [X] Weather Filter by Territory
+* [X] Create a event log for the API and Erros
 * [ ] Add a Unit Test Layer
 * [ ] Add Data Exportation
 * [ ] Generate Dashborads and Reports
 
+## AWS Provision
+* [ ] Create a RDS (DataBase) to store historical data
+* [ ] Host API Layer
+* [ ] Host Web frontend
+
 ## Now I'm Working in...
-* [ ] Create a event log for the API and Erros
+* [ ] Add a Unit Test Layer
 
 ## Video Walk-Through
 * [X] [WebScraper](https://youtu.be/eYQpF0J_Yso)
