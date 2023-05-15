@@ -18,13 +18,18 @@ namespace WeatherChecker.Logs
         {
             Options = options.Value;
 
-            if(Directory.Exists(Options.FolderPath))
+            if(!Directory.Exists(Options.FolderPath))
             {
                 Directory.CreateDirectory(Options.FolderPath);
             }
         }
 
         public ILogger CreateLogger(string categoryName)
+        {
+            return new CustomLog(this);
+        }
+
+        public CustomLog CreateLoggerCustomType()
         {
             return new CustomLog(this);
         }

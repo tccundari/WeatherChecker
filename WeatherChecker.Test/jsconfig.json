@@ -14,7 +14,7 @@
     },
     "CustomLog": {
       "Options": {
-        "FolderPath": "C:\\Users\\Public\\",
+        "FolderPath": "C:\\Users\\Public\\Test",
         "FilePath": "log_{date}.log"
       },
       "LogLevel": {
@@ -25,5 +25,6 @@
         "WeatherChecker.API.Controllers": "Trace"
       }
     }
-  }
+  },
+  "ApiUrl": "http://localhost:5000/"
 }
