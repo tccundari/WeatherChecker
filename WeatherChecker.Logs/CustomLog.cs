@@ -8,7 +8,7 @@ namespace WeatherChecker.Logs
 {
     public class CustomLog : ILogger
     {
-        protected readonly CustomLogProvider _customLogProvider;
+        private readonly CustomLogProvider _customLogProvider;
 
         public CustomLog([NotNull] CustomLogProvider provider)
         {
@@ -25,14 +25,22 @@ namespace WeatherChecker.Logs
             return logLevel != LogLevel.None;
         }
 
+        public string FilePath
+        {
+            get
+            {
+                return string.Format("{0}\\{1}", _customLogProvider.Options.FolderPath, _customLogProvider.Options.FilePath.Replace("{date}", DateTime.Now.ToString("yyyyMMdd")));
+            }
+        }
+
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
             if (!IsEnabled(logLevel))
                 return;
 
-            var fullFilePart = string.Format("{0}/{1}", _customLogProvider.Options.FolderPath, _customLogProvider.Options.FilePath.Replace("{date}",DateTime.UtcNow.ToString("yyyyMMdd")));
+            var fullFilePart = FilePath;
 
-            var logRecord = string.Format("{0} [{1}] {2} {3}", DateTime.UtcNow, logLevel.ToString(), formatter(state, exception), (exception != null ? exception.StackTrace : ""));
+            var logRecord = string.Format("{0} [{1}] {2} {3}", DateTime.Now, logLevel.ToString(), formatter(state, exception), (exception != null ? exception.StackTrace : ""));
 
             Console.WriteLine(logRecord);
 
