@@ -1,14 +1,16 @@
 # Description
-A simple solution made to get wheather information of Australian cities from the [Australian Government WebSite.](http://www.bom.gov.au/australia/index.shtml) using a basic WebScraper and provide the information through an API to a web interface.
+A simple solution made to get wheather information from Australian cities in the [Australian Government WebSite.](http://www.bom.gov.au/australia/index.shtml) using a basic WebScraper and provide the information through an REST API to a web interface.
 
-This project was made as an example to show how to build a simple WebScraper, to shows how to struct data on the solution and how pro provide a service with the information that you get.
+This project was made as an example to show how to build a simple WebScraper, showing how to struct data on the solution and how to provide a service with the information that we get.
 
-*This project was made only to share code skills and teach about programming bots, there is no lucrative porpose on this project and can not be used in any business interests.
+**This project was made only to share code skills and teaching about programming bots, there is no lucrative porpose on this project and can not be used to any business interests.**
 
 ## Tecnologies
 - Build in Visual Studio 2019
 - .NET Core 5 (C#)
 - Angular 6
+- Nunit (for unit tests)
+- AWS RDS (Relational Data Service)
 
 ## Features
 * [X] Create solution and base crawler
@@ -20,8 +22,13 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [X] Basic search on information table by city names
 * [X] Weather Filter by Territory
 * [X] Create a event log for the API and Erros
-* [ ] Add a Unit Test Layer
-* [ ] Add Data Exportation
+  * [X] Created a CustomLog service to log events in Console and updating a file.log on local machine
+* [X] Add a Unit Test Layer
+  * [X] API Layer
+  * [X] CustomLog Layer
+  * [X] WebCrawler Layer
+* [ ] Add Data Exportation feature for angular frontend
+* [ ] Better Home Page display
 * [ ] Generate Dashborads and Reports
 
 ## AWS Provision
@@ -30,7 +37,7 @@ This project was made as an example to show how to build a simple WebScraper, to
 * [ ] Host Web frontend
 
 ## Now I'm Working in...
-* [ ] Add a Unit Test Layer
+* Add Data Exportation feature for angular frontend
 
 ## Video Walk-Through
 * [X] [WebScraper](https://youtu.be/eYQpF0J_Yso)
