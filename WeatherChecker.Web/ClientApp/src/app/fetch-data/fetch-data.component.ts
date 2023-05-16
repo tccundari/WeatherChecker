@@ -1,6 +1,7 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NotificationService } from "../notification.service";
+import * as XLSX from 'xlsx';
 
 interface State {
   value: string;
@@ -13,11 +14,13 @@ interface State {
 })
 
 export class FetchDataComponent {
+  @ViewChild('WeatherResults') table: ElementRef;
   public forecasts: WeatherForecast[];
   public forecasts_cache: WeatherForecast[];
   private apiUrl: string;
   private httpCli: HttpClient;
   private notificationServ: NotificationService;
+  
 
   states: State[] = [
     { value: 'all', viewValue: 'All' },
@@ -59,6 +62,17 @@ export class FetchDataComponent {
     const filterValue = (event.target as HTMLInputElement).value;
     this.forecasts = this.forecasts_cache;
     this.forecasts = this.forecasts.filter(x => x.descriptionCity.toLowerCase().includes(filterValue.toLowerCase()));
+  }
+
+  ExportToExcel() {
+    alert(this.table);
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(this.table.nativeElement);
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+
+    /* save to file */
+    XLSX.writeFile(wb, 'WeatherInformation.xlsx');
+
   }
 }
 
