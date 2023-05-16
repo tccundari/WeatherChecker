@@ -9,6 +9,7 @@ This project was made as an example to show how to build a simple WebScraper, sh
 - Build in Visual Studio 2019
 - .NET Core 5 (C#)
 - Angular 6
+ - [Angular Material(https://material.angular.io/)
 - Nunit (for unit tests)
 - AWS RDS (Relational Data Service)
 
@@ -27,17 +28,17 @@ This project was made as an example to show how to build a simple WebScraper, sh
   * [X] API Layer
   * [X] CustomLog Layer
   * [X] WebCrawler Layer
-* [ ] Add Data Exportation feature for angular frontend
+* [X] Add Data Exportation feature for angular frontend
 * [ ] Better Home Page display
 * [ ] Generate Dashborads and Reports
 
-## AWS Provision
+## AWS Provisioning
 * [ ] Create a RDS (DataBase) to store historical data
 * [ ] Host API Layer
 * [ ] Host Web frontend
 
 ## Now I'm Working in...
-* Add Data Exportation feature for angular frontend
+* Create a RDS (DataBase) to store historical data
 
 ## Video Walk-Through
 * [X] [WebScraper](https://youtu.be/eYQpF0J_Yso)
