@@ -38,7 +38,7 @@ This project was made as an example to show how to build a simple WebScraper, sh
 * [ ] Host Web frontend
 
 ## Now I'm Working in...
-* Create a RDS (DataBase) to store historical data
+* Hosting APIs on AWS
 
 ## Video Walk-Through
 * [X] [WebScraper](https://youtu.be/eYQpF0J_Yso)
