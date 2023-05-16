@@ -17,7 +17,7 @@ This project was made as an example to show how to build a simple WebScraper, sh
 * [X] Create solution and base crawler
 * [X] Add a API layer provide the information as services
 * [X] Add a Web Interface and consume our APIs
-* [X] Build a global notification and alerts Credits to \(@Cristux for the amazing [template](https://stackblitz.com/edit/angular-notification-service)\)
+* [X] Build a global notification and alerts \(Credits to @Cristux for the amazing [template](https://stackblitz.com/edit/angular-notification-service)\)
 * [X] Clean unnecessary code
 * [X] Improve interface resources (implemented Angular Material SDK)
 * [X] Basic search on information table by city names
@@ -28,7 +28,7 @@ This project was made as an example to show how to build a simple WebScraper, sh
   * [X] API Layer
   * [X] CustomLog Layer
   * [X] WebCrawler Layer
-* [X] Add Data Exportation feature for angular frontend
+* [X] Add Data Exportation feature for angular frontend \(Credits to @Vikash5529 for the example(https://stackblitz.com/edit/angular-uyanwz?file=main.ts)\)
 * [ ] Better Home Page display
 * [ ] Generate Dashborads and Reports
 
