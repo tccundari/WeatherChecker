@@ -28,6 +28,7 @@ This project was made as an example to show how to build a simple WebScraper, sh
   * [X] API Layer
   * [X] CustomLog Layer
   * [X] WebCrawler Layer
+  * [X] Implement Git Action to auto test on commits
 * [X] Add Data Exportation feature for angular frontend \(Credits to @Vikash5529 for the [example](https://stackblitz.com/edit/angular-uyanwz?file=main.ts)\)
 * [ ] Better Home Page display
 * [ ] Generate Dashborads and Reports
@@ -35,7 +36,9 @@ This project was made as an example to show how to build a simple WebScraper, sh
 ## AWS Provisioning
 * [ ] Create a RDS (DataBase) to store historical data
 * [ ] Host API Layer
+* [ ] Create Git Action to deploy API
 * [ ] Host Web frontend
+* [ ] Create Git Action to deploy FrontEnd
 
 ## Now I'm Working in...
 * Hosting APIs on AWS
