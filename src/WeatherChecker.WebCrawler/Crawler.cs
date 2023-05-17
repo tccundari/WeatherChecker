@@ -52,7 +52,7 @@ namespace WeatherChecker.WebCrawler
                         }
                     }
                 }
-                catch(Exception ex)
+                catch
                 {
                     tries++;
                 }
