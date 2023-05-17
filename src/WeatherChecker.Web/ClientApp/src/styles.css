@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.example-card {
+  max-width: 400px; 
+}
+
+.example-header-image {
+  background-image: url('https://avatars.githubusercontent.com/u/925375?s=400&u=bac1b9e7b694869430963af8a3d9193b7295163e&v=4');
+  background-size: cover;
+}

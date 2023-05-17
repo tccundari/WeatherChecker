@@ -1,0 +1,30 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning",
+      "Microsoft.Hosting.LifeTime": "Information"
+    },
+    "Console": {
+      "LogLevel": {
+        "Default": "Error",
+        "Microsoft": "Error",
+        "WeatherChecker.API.Controllers": "Trace"
+      }
+    },
+    "CustomLog": {
+      "Options": {
+        "FolderPath": "C:\\Users\\Public\\Test",
+        "FilePath": "log_{date}.log"
+      },
+      "LogLevel": {
+        "Default": "Error",
+        "Microsoft": "Error",
+        "Microsoft.AspNetCore": "Error",
+        "Microsoft.Hosting.LifeTime": "Error",
+        "WeatherChecker.API.Controllers": "Trace"
+      }
+    }
+  },
+  "ApiUrl": "http://localhost:5000/"
+}
