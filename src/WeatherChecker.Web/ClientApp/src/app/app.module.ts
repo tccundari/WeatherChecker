@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { MatToolbarModule, MatIconModule, MatTooltipModule, MatButtonModule, MatCardModule, MatGridListModule, MatInputModule, MatSelectModule } from "@angular/material";
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -14,8 +14,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { NotificationListComponent } from './notification.component';
 import { NotificationService } from './notification.service';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { CorsInterceptor } from './cors.interceptor';
 
-@NgModule({
+@NgModule({ 
   declarations: [
     AppComponent,
     NavMenuComponent,
@@ -35,7 +36,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [NotificationService],
+  providers: [NotificationService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: CorsInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

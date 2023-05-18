@@ -14,7 +14,7 @@ interface State {
 })
 
 export class FetchDataComponent {
-  @ViewChild('WeatherResults') table: ElementRef;
+  @ViewChild('WeatherResults', { static: false }) table: ElementRef;
   public forecasts: WeatherForecast[];
   public forecasts_cache: WeatherForecast[];
   private apiUrl: string;
