@@ -17,6 +17,14 @@ namespace WeatherChecker.API
             Host.CreateDefaultBuilder(args)
             .ConfigureWebHostDefaults(webBuilder =>
             {
+                webBuilder.UseKestrel(options =>
+                {
+                    options.ListenAnyIP(5000);
+                    options.ListenAnyIP(5001, listenOptions =>
+                    {
+                        listenOptions.UseHttps(); // Use this line if you have a valid SSL certificate for local development
+                    });
+                });
                 webBuilder.UseStartup<Startup>();
             })
             .ConfigureLogging((context, logging) =>

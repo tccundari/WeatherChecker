@@ -35,12 +35,13 @@ namespace WeatherChecker.API
 
             services.AddCors(options =>
             {
-                options.AddDefaultPolicy(
+                options.AddPolicy("AllowSpecificOrigin",
                     builder =>
                     {
-                        builder.WithOrigins("https://localhost:44386", "http://localhost:4200")
-                                            .AllowAnyHeader()
-                                            .AllowAnyMethod();
+                        builder.WithOrigins("https://localhost:44368")
+                       .AllowAnyHeader()
+                       .AllowAnyMethod()
+                       .AllowAnyOrigin();
                     });
             }); // Make sure you call this previous to AddMvc
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
@@ -62,14 +63,16 @@ namespace WeatherChecker.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WeatherChecker.API v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
+            app.Use(async (context, next) =>
+            {
+                context.Request.Scheme = "https";
+                await next();
+            });
 
             app.UseRouting();
 
-            app.UseCors(options =>
-                options.AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader());
+            app.UseCors("AllowSpecificOrigin");
 
             app.UseAuthorization();
 
