@@ -22,7 +22,9 @@ namespace WeatherChecker.Logs
 
         public bool IsEnabled(LogLevel logLevel)
         {
-            return logLevel != LogLevel.None;
+            //return logLevel != LogLevel.None;
+
+            return false;
         }
 
         public string FilePath

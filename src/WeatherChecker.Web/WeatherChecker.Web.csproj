@@ -32,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\cors.interceptor.ts" />
     <None Remove="ClientApp\src\app\notification.component.ts" />
     <None Remove="ClientApp\src\app\notification.service.ts" />
     <None Remove="ClientApp\src\app\notification.ts" />
@@ -68,5 +69,7 @@
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties clientapp_4angular_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>
